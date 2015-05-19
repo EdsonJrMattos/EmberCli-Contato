@@ -1,0 +1,21 @@
+<button type="button" class="btn btn-primary glyphicon glyphicon-plus btn-lg" aria-label="Left Align"{{action "adicionar"}}></button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each contato in model}}
+      <tr>
+        <th>{{contato.name}}</th>
+        <th>{{contato.phone}}</th>
+        <th>{{contato.email}}</th>
+        <th><i class="btn btn-default glyphicon glyphicon-pencil"{{action "editar"}}>Edit</i><i class="btn btn-danger glyphicon glyphicon-remove " {{action "deletar"}}></i></th>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
